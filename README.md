@@ -13,9 +13,9 @@ Model | Train-Accuracy | Test-Accuracy| Epochs
 --- | --- | ---| ---
 modelv1 | 99.45 | 62 | 10
 modelv2 | ? | ? | 10
-modelv3 | 99.45 | 62 | 20
-modelv4 | 83 | 60 | 20
-modelv5 | 78 | 57 | 20
+modelv3 | 84 | 60.4 | 20
+modelv4 | 96 | 63.25 | 60
+modelv5 | 92.2 | 62.3 | 60
 
 
 ### modelv1 
