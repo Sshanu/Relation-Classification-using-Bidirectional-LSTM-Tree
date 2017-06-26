@@ -1,0 +1,9 @@
+CC
+CD
+DT
+IN
+JJ
+NN
+PRP
+RB
+VB

@@ -1,6 +1,5 @@
 checkpoint/
 .ipynb_checkpoints/
-*.txt
 _pycache_/
 word_embedding
 glove.6B.100d.txt
