@@ -7,6 +7,12 @@
 7. Pool the Lstms from all the nodes.
 8. Linear Layer with regularization and SoftMax for classification.
 
-## modelv1 
-## modelv2 
+### modelv1 
+*  epochs =    Accuracy 
+
+### modelv2 
 dropout over hidden layer 0.3
+
+Model | Train-Accuracy | Test-Accuracy| Epochs
+--- | --- | ---| ---
+modelv1 | 99.45 | 62 | 10
