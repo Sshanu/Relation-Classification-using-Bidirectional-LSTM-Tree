@@ -4,3 +4,4 @@ _pycache_/
 word_embedding
 glove.6B.100d.txt
 glove.6B.200d.txt
+train/

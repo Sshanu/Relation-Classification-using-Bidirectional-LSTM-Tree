@@ -16,6 +16,7 @@ modelv2 | ? | ? | 10
 modelv3 | 84 | 60.4 | 20
 modelv4 | 96 | 63.25 | 60
 modelv5 | 92.2 | 62.3 | 60
+modelv6 | 99.3 | 63 | 60
 
 
 ### modelv1 
@@ -38,3 +39,6 @@ modelv5 | 92.2 | 62.3 | 60
 * dropout over word_embedding and hidden_layer - 0.3
 * other_state_size = 50
 * lambda = 0.00001
+
+### modelv5
+* dropout over word_embedding, pos_embedding, dep_embedding of 0.5  and hidden_layer - 0.3
