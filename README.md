@@ -17,7 +17,7 @@ modelv3 | 84 | 60.4 | 20
 modelv4 | 96 | 63.25 | 60
 modelv5 | 92.2 | 62.3 | 60
 modelv6 | 99.3 | 63 | 60
-
+model3v1 | 97.54 | 66.5 | 11
 
 ### modelv1 
 * No dropout 
