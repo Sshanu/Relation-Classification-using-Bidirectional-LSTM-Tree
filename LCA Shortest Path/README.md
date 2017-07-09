@@ -7,7 +7,7 @@
 7. Pool the Lstms from all the nodes.
 8. Linear Layer with regularization and SoftMax for classification.
 
-
+![LCA Shortest Path](/img/lca.jpg)
 
 Model | Train-Accuracy | Test-Accuracy| Epochs
 --- | --- | ---| ---
