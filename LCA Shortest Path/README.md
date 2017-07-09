@@ -17,7 +17,6 @@ modelv7 | 94.6 | 60.03 | 20
 modelv8 | 98.96 | 62.5 | 60
 
 ### [modelv1](https://github.com/Sshanu/Relation-Classification/blob/master/LCA%20Shortest%20Path/modelv1.ipynb)
-* No dropout 
 * Learning rate = 0.001 
 * other_state size = 100
 * lambda_l2 = 0.0001
