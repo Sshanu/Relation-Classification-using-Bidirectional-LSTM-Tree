@@ -1,4 +1,4 @@
-# Relation Classification
+# Relation Classification in Tensorflow
 
 Relation Classification using LSTM between two given entities.
 
