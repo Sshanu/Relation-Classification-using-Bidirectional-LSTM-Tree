@@ -24,7 +24,7 @@ without linguistic expertise
 ### Recurrent Neural Networks
 
 Recurrent Neural Networks have one problem, known as gradient vanishing or exploding problem. Long short term memory(LSTM) overcome this problem by introducing an adaptive gating mechanism, which keep the previous state and memorize the extracted features of the current data input.
-LSTM-based recurrent neuralnetwork comprises four components: an input gate, a forget gate, an output gate, and a memory cell.
+LSTM-based recurrent neural network comprises four components: an input gate, a forget gate, an output gate, and a memory cell.
 The two SDP-LSTM  propagate bottom-up from the entities to their common ancestor. This way, the model is direction-sensitive.
 
 A max pooling layer packs, for each sub-path, the recurrent network’s states, to a fixed vector by taking the maximum value in each dimension.
