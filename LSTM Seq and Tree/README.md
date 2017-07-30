@@ -29,7 +29,7 @@ The LSTM unit at t-th word receives the concatenation of word and POS embeddings
   <img src="/img/lstm_seq.jpg">
 </p>
 
-We also concatenate the hidden state vectors of the two directions’ LSTM units corresponding to each word (denoted as −→ht and ←−ht) as its output vector (st), and pass it to the subsequent layers.
+We also concatenate the hidden state vectors of the two directions’ LSTM units corresponding to each word (denoted as ↑ht and ↓ht) as its output vector (st), and pass it to the subsequent layers.
 
 ### Entity Detection 
 We perform entity detection on top of the sequence
