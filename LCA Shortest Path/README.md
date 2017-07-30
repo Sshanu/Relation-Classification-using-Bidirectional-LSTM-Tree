@@ -5,7 +5,7 @@ This neural architecture utilizes the shortest dependency path between two entit
 The shortest dependency paths retain most relevant information (to relation classification), while eliminating irrelevant words in the sentence.
 
 ## SDP-LSTM Model
- 
+
 ![LCA Shortest Path](/img/lca.jpg)
 
 First sentence is parsed to a dependency tree by the [Stanford parser](https://nlp.stanford.edu/software/stanford-dependencies.shtml), the shortest dependency path(SDP) is extracted as the input of our network.
@@ -26,11 +26,14 @@ without linguistic expertise
 Recurrent Neural Networks have one problem, known as gradient vanishing or exploding problem. Long short term memory(LSTM) overcome this problem by introducing an adaptive gating mechanism, which keep the previous state and memorize the extracted features of the current data input.
 LSTM-based recurrent neuralnetwork comprises four components: an input gate, a forget gate, an output gate, and a memory cell.
 The two SDP-LSTM  propagate bottom-up from the entities to their common ancestor. This way, the model is direction-sensitive.
+
 A max pooling layer packs, for each sub-path, the recurrent network’s states, to a fixed vector by taking the maximum value in each dimension.
 The pooling layers from different channels are concatenated, and then connected to a hidden layer. Finally, we have a softmax output layer for
 classification. 
+
 The training objective is the cross-entropy error with l2-regulaizer to avoid overfitting. We apply Adam Gradient Descent for optmization.
 
+## Experiments
 
 Model | Train-Accuracy | Test-Accuracy| Epochs
 --- | --- | ---| ---
@@ -67,7 +70,7 @@ modelv8 | 98.96 | 62.5 | 60
 * dropout over word_embedding, pos_embedding, dep_embedding of 0.5  
 * dropout on hidden_layer of 0.3
 
-``learning rate decay rate 0.96 over 2000 steps``
+``below all models have a learning rate decay at the rate of 0.96 over 2000 steps``
 
 ### [modelv6](https://github.com/Sshanu/Relation-Classification/blob/master/LCA%20Shortest%20Path/modelv6.ipynb)
 * learning rate decays.
