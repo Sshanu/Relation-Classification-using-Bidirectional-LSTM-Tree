@@ -11,7 +11,6 @@ Model | Train-Accuracy | Test-Accuracy| Epochs
 --- | --- | ---| ---
 model3v1 | 97.54 | 66.5 | 11
 model3v2 | 99.9 | 70.69 | 19
-model3v3 | ?     | ?  | 10
 
 
 * Learning rate = 0.001 
@@ -28,7 +27,3 @@ model3v3 | ?     | ?  | 10
 
 ### [model3v2](https://github.com/Sshanu/Relation-Classification/blob/master/LSTM%20Seq%20and%20Tree/model3v2.ipynb)
 * Dropout on hidden layers of both entity detection and relation classifier of 0.3.
-
-### [model3v3](https://github.com/Sshanu/Relation-Classification/blob/master/LSTM%20Seq%20and%20Tree/model3v3.ipynb)
-* Dropout on hidden layers of both entity detection and relation classifier of 0.3.
-* Dropout on word embeddings of 0.5
