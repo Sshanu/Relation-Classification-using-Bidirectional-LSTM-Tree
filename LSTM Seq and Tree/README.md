@@ -1,8 +1,5 @@
 ## Relation Classification using LSTMs on Sequences and Tree Structures
 
-This implementation is based on [End-to-End Relation Extraction using LSTMs
-on Sequences and Tree Structures](http://www.aclweb.org/anthology/P/P16/P16-1105.pdf) paper.
-
 We implemented a architecture based on the paper [End-to-End Relation Extraction using LSTMs
 on Sequences and Tree Structures](http://www.aclweb.org/anthology/P/P16/P16-1105.pdf). This recurrent neural network based model captures both word sequence and dependency tree substructure information by stacking bidirectional treestructured LSTM-RNNs on bidirectional sequential LSTM-RNNs. This allows our model to jointly represent both entities and relations with shared parameters in a single model.
 
@@ -25,10 +22,19 @@ Embedding layer consists of words, part-of-speech (POS) tags, dependency relatio
 The sequence layer represents words in a linear sequence
 using the representations from the embedding layer. We represent the word sequence in a sentence with bidirectional LSTM-RNNs. 
 The LSTM unit at t-th word receives the concatenation of word and POS embeddings as its input vector. 
+
 <p align="center">
   <img src="/img/lstm_seq.jpg">
 </p>
+
 We also concatenate the hidden state vectors of the two directions’ LSTM units corresponding to each word (denoted as −→ht and ←−ht) as its output vector (st), and pass it to the subsequent layers.
+
+### Entity Detection 
+We perform entity detection on top of the sequence
+layer. We employ a two-layered NN with an hidden layer and a softmax output layer for entity detection.
+
+### Dependency Layer
+
 ![Relation Classification Network](/img/lstm_tree.jpg)
 
 Model | Train-Accuracy | Test-Accuracy| Epochs
