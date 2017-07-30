@@ -15,6 +15,8 @@ tree-structured (bottom-up and top-down) LSTMRNNs.
 The model mainly consists of three representation layers:
 a embeddings layer, a word sequence based LSTM-RNN layer (sequence layer), and finally a dependency subtree based LSTM-RNN layer (dependency layer).
 
+![Relation Classification Network](/img/lstm_tree.jpg)
+
 ### Embedding Layer
 Embedding layer consists of words, part-of-speech (POS) tags, dependency relations.
 
@@ -34,8 +36,39 @@ We perform entity detection on top of the sequence
 layer. We employ a two-layered NN with an hidden layer and a softmax output layer for entity detection.
 
 ### Dependency Layer
+The dependency layer represents a relation between a pair of two target words (corresponding to a relation candidate in relation classification) in
+the dependency tree.
 
-![Relation Classification Network](/img/lstm_tree.jpg)
+This layer mainly focuses on the shortest path between a pair of target words in the dependency tree (i.e., the path between the least common node and the two target words).
+
+We employ bidirectional tree-structured LSTMRNNs (i.e., bottom-up and top-down) to represent a relation candidate by capturing the dependency
+structure around the target word pair. This bidirectional structure propagates to each node not only the information from the leaves but also information from the root. This is especially important for relation classification, which makes use of argument nodes near the bottom of the tree, and our top-down LSTM-RNN sends information from the top of the tree to such near-leaf nodes (unlike in standard bottom-up LSTM-RNNs).
+
+Tree-structured LSTM-RNN's equations :
+<p align="center">
+  <img src="/img/lstm_tree_eq.jpg">
+</p>
+
+While we use one node from Shortest Dependency path, then the hidden and current states of the children of this node in Dependency Tree are taken as previous state in LSTM.
+
+We stack the dependency layers (corresponding to relation candidates) on top of the sequence layer to incorporate both word sequence and dependency tree structure information into the output.
+The dependency-layer LSMT unit at the t-th word recives as input, the concatenation of its corresponding hidden state vectors st in the sequence layer, dependency type embedding.
+
+### Relation Classification 
+The relation candidate vector is constructed as
+the concatenation dp = [↑hpA; ↓hp1; ↓hp2], where ↑hpA is the hidden state vector of the top LSTM unit in the bottom-up LSTM-RNN (representing the lowest common ancestor of the target word pair p), and ↓hp1, ↓hp2 are the hidden state vectors of the two LSTM units representing the first and second target words in the top-down LSTMRNN.
+
+Similarly to the entity detection, we employ a two-layered NN with an hidden layer and a softmax output layer.
+
+### Training
+
+We update the model parameters including weights, biases, and embeddings by BPTT and Adam gradient descent with gradient clipping, L2-regularization
+(we regularize weights W and U, not the bias terms b). We also apply dropout to the embedding layer and to the final hidden layers for entity detection and relation classification. We employ entity pretraining to improve the model.
+
+### Data
+
+SemEval-2010 Task 8 defines 9 relation types between nominals and a tenth type Other when two nouns have none of these relations and no direction is considered.
+## Experiments
 
 Model | Train-Accuracy | Test-Accuracy| Epochs
 --- | --- | ---| ---

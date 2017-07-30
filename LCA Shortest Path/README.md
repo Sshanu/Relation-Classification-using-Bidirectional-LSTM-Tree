@@ -31,8 +31,13 @@ A max pooling layer packs, for each sub-path, the recurrent network’s states, 
 The pooling layers from different channels are concatenated, and then connected to a hidden layer. Finally, we have a softmax output layer for
 classification. 
 
-The training objective is the cross-entropy error with l2-regulaizer to avoid overfitting. We apply Adam Gradient Descent for optmization.
+### Training
 
+We update the model parameters including weights, biases, and embeddings by BPTT and Adam gradient descent with L2-regularization (we regularize weights W and U, not the bias terms b).
+
+### Data
+
+SemEval-2010 Task 8 defines 9 relation types between nominals and a tenth type Other when two nouns have none of these relations. Direction is considered and hence model is trained over 19 relation classes.
 ## Experiments
 
 Model | Train-Accuracy | Test-Accuracy| Epochs
