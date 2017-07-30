@@ -8,4 +8,4 @@ We tried many ways to classify relations.
 * [Classify using bidirectional LSTM Networks on LCA Sub Tree.](https://github.com/Sshanu/Relation-Classification/tree/master/LCA%20SubTree)
 * [Classification using LSTMS on Sequences and Tree Structures.](https://github.com/Sshanu/Relation-Classification/tree/master/LSTM%20Seq%20and%20Tree)
 
-Better performance is achived using LSTMs over Dependency Trees.
+Better performance is achived using LSTMs on Sequences and Tree Structures.
