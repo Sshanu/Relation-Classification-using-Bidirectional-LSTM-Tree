@@ -1,6 +1,6 @@
 # Relation Classification 
 
-The aim of relation classification is to categorize into predefined classes the relations between pairs of marked entities in given texts. 
+The aim of relation classification is to categorize into predefined classes the relations btw pairs of given entities in given texts. 
 
 There are two ways to represent relations between entities using neural networks: recurrent/recursive neural networks (RNNs) and convolutional neural networks (CNNs). We tried LSTM-RNN architecture in Tensorflow.
 
