@@ -10,3 +10,9 @@ We implemented three LSTM-RNN architectures:
 * [Classification using LSTMS on Sequences and Tree Structures.](https://github.com/Sshanu/Relation-Classification/tree/master/LSTM%20Seq%20and%20Tree)
 
 Better performance is achived in [Classification using LSTMS on Sequences and Tree Structures.](https://github.com/Sshanu/Relation-Classification/tree/master/LSTM%20Seq%20and%20Tree).
+
+
+### References:
+* [End-to-End Relation Extraction using LSTMs on Sequences and Tree Structures](http://www.aclweb.org/anthology/P/P16/P16-1105.pdf)
+* [Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths](https://arxiv.org/pdf/1508.03720.pdf)
+
