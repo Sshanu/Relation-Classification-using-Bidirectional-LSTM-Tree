@@ -1,5 +1,7 @@
 # Relation Classification 
 
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT) 
+
 The aim of relation classification is to categorize into predefined classes the relations btw pairs of given entities in texts. 
 
 There are two ways to represent relations between entities using neural networks: recurrent neural networks (RNNs) and convolutional neural networks (CNNs), We tried RNNs in Tensorflow.
