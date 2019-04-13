@@ -7,7 +7,7 @@ Relation classification aims to categorize into predefined classes the relations
 * [Relation classification using bidirectional LSTM Networks on LCA Sub Tree.](https://github.com/Sshanu/Relation-Classification/tree/master/LCA%20SubTree)
 * [Relation classification using LSTMS on Sequences and Tree Structures.](https://github.com/Sshanu/Relation-Classification/tree/master/LSTM%20Seq%20and%20Tree)
 
-We achieve better performance for solving the task of relation classification using the last approach "[Classification using LSTMS on Sequences and Tree Structures.](https://github.com/Sshanu/Relation-Classification/tree/master/LSTM%20Seq%20and%20Tree)".
+We achieve better performance for solving this task using the last approach "[Relation classification using LSTMS on Sequences and Tree Structures.](https://github.com/Sshanu/Relation-Classification/tree/master/LSTM%20Seq%20and%20Tree)".
 
 
 ### References:
