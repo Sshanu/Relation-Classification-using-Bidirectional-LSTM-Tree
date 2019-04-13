@@ -11,7 +11,7 @@ We have implemented three LSTM-RNN architectures:
 * [Classify using bidirectional LSTM Networks on LCA Sub Tree.](https://github.com/Sshanu/Relation-Classification/tree/master/LCA%20SubTree)
 * [Classification using LSTMS on Sequences and Tree Structures.](https://github.com/Sshanu/Relation-Classification/tree/master/LSTM%20Seq%20and%20Tree)
 
-We acheive better performance using the last approach "[Classification using LSTMS on Sequences and Tree Structures.](https://github.com/Sshanu/Relation-Classification/tree/master/LSTM%20Seq%20and%20Tree)".
+We acheive better performance for solving the task of relation classification using the last approach "[Classification using LSTMS on Sequences and Tree Structures.](https://github.com/Sshanu/Relation-Classification/tree/master/LSTM%20Seq%20and%20Tree)".
 
 
 ### References:
