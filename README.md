@@ -33,7 +33,7 @@ several model components*
 
 > **Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths**<br>
 > Yan Xu, Lili Mou, Ge Li, Yunchuan Chen, Hao Peng, Zhi Jin<br>
-> [https://arxiv.org/pdf/1508.03720.pdf](https://arxiv.org/pdf/1508.03720.pdf)
+> [http://www.emnlp2015.org/proceedings/EMNLP/pdf/EMNLP206.pdf](http://www.emnlp2015.org/proceedings/EMNLP/pdf/EMNLP206.pdf)
 > 
 > **Abstract:** *Relation classification is an important research arena in the field of natural language processing (NLP). In this paper, we
 present SDP-LSTM, a novel neural network to classify the relation of two entities in a sentence. Our neural architecture
